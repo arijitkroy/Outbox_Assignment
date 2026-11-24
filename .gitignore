@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+server/dist/
+client/dist/
+client/*.tsbuildinfo
+client/node_modules
+.docker/

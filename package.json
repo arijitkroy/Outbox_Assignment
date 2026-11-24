@@ -1,0 +1,1 @@
+{"name":"reachinbox","version":"1.0.0","private":true,"workspaces":["server","client"],"scripts":{"dev":"concurrently -k \"npm:dev -w server\" \"npm:dev -w client\"","build":"npm run build --workspaces --if-present","test":"npm test --workspaces --if-present"},"devDependencies":{"concurrently":"^9.1.2"}}
