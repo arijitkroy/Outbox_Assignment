@@ -158,15 +158,15 @@ Never commit `.env` or OAuth/SMTP credentials. Use secret manager and HTTPS in p
 
 ## API
 
-- `GET /api/health` — PostgreSQL and Redis readiness.
-- `GET /api/auth/me`, `POST /api/auth/logout` — session.
-- `GET /auth/google`, `GET /auth/slack` — OAuth starts.
-- `POST /api/campaigns` — authenticated creation; accepts `{ "name": "...", "emails": [{"sender":"...","recipient":"...","subject":"...","body":"...","scheduledAt":"optional ISO datetime"}] }`, maximum 1,000 recipients.
-- `GET /api/campaigns` — counts by delivery state.
-- `GET /api/campaigns/:id/emails` — latest recipient records.
-- `GET /api/emails/search?q=...` — Elasticsearch search.
+- `GET /api/health` - PostgreSQL and Redis readiness.
+- `GET /api/auth/me`, `POST /api/auth/logout` - session.
+- `GET /auth/google`, `GET /auth/slack` - OAuth starts.
+- `POST /api/campaigns` - authenticated creation; accepts `{ "name": "...", "emails": [{"sender":"...","recipient":"...","subject":"...","body":"...","scheduledAt":"optional ISO datetime"}] }`, maximum 1,000 recipients.
+- `GET /api/campaigns` - counts by delivery state.
+- `GET /api/campaigns/:id/emails` - latest recipient records.
+- `GET /api/emails/search?q=...` - Elasticsearch search.
 - `GET /api/dashboard/stats`, `GET /api/integrations`.
-- `GET /admin/queues` — Bull Board UI.
+- `GET /admin/queues` - Bull Board UI.
 
 ## Scheduling and delivery guarantees
 
@@ -174,8 +174,8 @@ Campaign creation writes campaign and recipient records in a PostgreSQL transact
 
 ## Scripts and tests
 
-- `npm run dev` — API and Vite concurrently.
-- `npm run build` — production builds for both workspaces.
-- `npm test` — workspace tests.
+- `npm run dev` - API and Vite concurrently.
+- `npm run build` - production builds for both workspaces.
+- `npm test` - workspace tests.
 
 Docker services unavailable in current execution environment; live integrations and email delivery require services and credentials. Build/test checks reflect local dependencies only.
